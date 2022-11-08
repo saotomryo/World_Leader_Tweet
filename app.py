@@ -21,8 +21,8 @@ reference_country = st.sidebar.selectbox(
 country_list = {"アメリカ":"United States", "イギリス":"United Kingdom", "日本":"Japan","イタリア":"Italy",
             "ドイツ":"Germany","フランス":"France","カナダ":"Canada","中国":"China","韓国":"South Korea"}
 
-df = pd.read_excel('tweet_history.xlsx')
-leaders = pd.read_excel('world_politics_leaders_account.xlsx')
+df = pd.read_csv('tweet_history.csv')
+leaders = pd.read_csv('world_politics_leaders_account.csv')
 country = country_list[reference_country]
 #leader_account = leaders['twitter_screen_names'][leaders['country'].str.contains(country)].values
 leader_account = leaders[leaders['country'].str.contains(country)]
