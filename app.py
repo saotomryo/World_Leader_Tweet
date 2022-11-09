@@ -34,17 +34,17 @@ leader = st.sidebar.selectbox(
 
 leader_screen_name = leader_account['twitter_screen_names'][leaders['twitter_names'] == leader].values[0]
 
-display_start = st.button('start')
+#display_start = st.button('start')
 
-if display_start:
+#if display_start:
     
-    result = df[df['screen_name'] == leader_screen_name].sort_values('date', ascending=False)
-    for tweet_text,tweet_date in zip(result['tweet_ja'].values,result['date'].values):
-        tweet_date = pd.to_datetime(tweet_date)
-        tweet_date
-        st.markdown(tweet_text)
-        ''
-        ''
+result = df[df['screen_name'] == leader_screen_name].sort_values('date', ascending=False)
+for tweet_text,tweet_date in zip(result['tweet_ja'].values,result['date'].values):
+    tweet_date = pd.to_datetime(tweet_date)
+    tweet_date
+    st.markdown(tweet_text)
+    ''
+    ''
         #st.text(tweet_text)
 
 
