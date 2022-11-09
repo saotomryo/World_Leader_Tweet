@@ -6,10 +6,6 @@ import streamlit as st
 
 st.title('各国のリーダーによるツイート')
 
-st.sidebar.write("""
-どの国のリーダーのツイートを確認しますか。
-""")
-
 
 reference_country = st.sidebar.selectbox(
     'どの国のリーダーのツイートを確認しますか',
